@@ -1,4 +1,4 @@
-## To run the API I modified some files: 
+## To run the API I modified some files (to fix CORS issue): 
 - uncommented `gem 'rack-cors'` in `Gemfile`
 - uncommented and modified in `cors.rb`
 `Rails.application.config.middleware.insert_before 0, Rack::Cors do`
