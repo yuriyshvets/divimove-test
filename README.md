@@ -1,3 +1,25 @@
+## To run the API I modified some files: 
+- uncommented `gem 'rack-cors'` in `Gemfile`
+- uncommented and modified in `cors.rb`
+`Rails.application.config.middleware.insert_before 0, Rack::Cors do`
+  `allow do`
+    `origins 'localhost:3001'`
+
+    `resource '*',`
+      `headers: :any,`
+      `methods: [:get, :post, :put, :patch, :delete, :options, :head]`
+  `end`
+`end`
+
+ 
+
+## To run the React app 
+- run API
+- run `yarn start` and allow to use different port (3001)
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
