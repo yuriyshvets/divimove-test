@@ -1,16 +1,18 @@
 ## To run the API I modified some files (to fix CORS issue): 
 - uncommented `gem 'rack-cors'` in `Gemfile`
 - uncommented and modified in `cors.rb`
-`Rails.application.config.middleware.insert_before 0, Rack::Cors do`
-  `allow do`
-    `origins 'localhost:3001'`
 
-    `resource '*',`
-      `headers: :any,`
-      `methods: [:get, :post, :put, :patch, :delete, :options, :head]`
-  `end`
-`end`
+```
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins 'localhost:3001'
 
+    resource '*',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+  end
+end
+```
  
 
 ## To run the React app 
