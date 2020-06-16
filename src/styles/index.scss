@@ -1,0 +1,15 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+.MuiButton-root + .MuiButton-root,
+.MuiChip-root + .MuiChip-root {
+  margin-left: 16px;
+}
